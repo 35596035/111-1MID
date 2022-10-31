@@ -12,14 +12,20 @@ namespace _111_1MID {
             string[] s_Menu = new string[] { "保單編號: ", "通訊種類: ", "通訊號碼: ", "所在城市: ", "所在區域: " };
             for (int i_Ct = 0; i_Ct < s_Get.Length; i_Ct++)
             {
+                if (Request.Form.Get(s_Get[2]) == "")
+                {
+                    Response.Write("0");
+                }
                 lb_Msg.Text += s_Menu[i_Ct] + Request.Form.Get(s_Get[i_Ct]) + "<br />";
+                // + "<br />"
             }
+            /*
             Response.Write("---------");
             string[] s = Request.Form.AllKeys;
             for (int i = 0; i < s.Length; i++)
             {
                 Response.Write(s[i] + "<br />");
-            }
+            }*/
         }
     }
 }
