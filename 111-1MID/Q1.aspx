@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
         <div>
             <h1>線上掛號系統</h1>
-            <h2>「|| 個人資訊」</h2>
+            <h2>「|| 掛號資訊」</h2>
             <asp:Panel ID="pl_Info" runat="server" Width="500px" BorderWidth="1px">
                 <h3><asp:Label ID="lb_Type" runat="server" Text="初診"></asp:Label></h3>
                 <asp:RadioButton ID="rb_Id" runat="server" GroupName="rb_Type" Text="身分證字號" Checked="True" />
@@ -26,8 +26,7 @@
             </br>
             <asp:Panel ID="pl_Msg" runat="server" Width="500px" BorderWidth="1px" Visible="False">
                 <asp:Label ID="lb_Msg" runat="server" Text=""></asp:Label>
-                <br>
-                </br>
+                <br></br>
                 <asp:HyperLink ID="HyperLink1" runat="server" Text="重新掛號" NavigateUrl="Q1.aspx"></asp:HyperLink>
             </asp:Panel>
         </div>
