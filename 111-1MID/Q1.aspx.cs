@@ -36,7 +36,7 @@ namespace _111_1MID {
             lb_Msg.Text = lb_Type.Text + "<br />" + tb_Account.Text + "先生/小姐，已完成掛號。" + "<br />";
             if (tb_Phone.Text != "")
             {
-                lb_Msg.Text += "已寄送信箱" + tb_Phone.Text + "<br />";
+                lb_Msg.Text += "連絡電話為" + tb_Phone.Text + "<br />";
             }
         }
     }
