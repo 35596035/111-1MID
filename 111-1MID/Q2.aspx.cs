@@ -13,7 +13,7 @@ namespace _111_1MID {
             {"淡水區", "石碇區", "土城區"},
             {"西屯區", "北屯區", "東區"}
         };
-
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -42,6 +42,18 @@ namespace _111_1MID {
                 ListItem o_L = new ListItem();
                 o_L.Text = o_L.Value = s_Area[i_ind, i_Ct];
                 dpl_Area.Items.Add(o_L);
+            }
+        }
+
+        protected void rbl_Phone_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (rbl_Phone.SelectedIndex == 2)
+            {
+                txt_Phone.Visible = false;
+            }
+            else
+            {
+                txt_Phone.Visible = true;
             }
         }
     }

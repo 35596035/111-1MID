@@ -14,6 +14,12 @@ namespace _111_1MID {
             {
                 lb_Msg.Text += s_Menu[i_Ct] + Request.Form.Get(s_Get[i_Ct]) + "<br />";
             }
+            Response.Write("---------");
+            string[] s = Request.Form.AllKeys;
+            for (int i = 0; i < s.Length; i++)
+            {
+                Response.Write(s[i] + "<br />");
+            }
         }
     }
 }
