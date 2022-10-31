@@ -27,7 +27,6 @@ namespace _111_1MID {
                 }
             }
             btn_Submit.Visible = ((tb_Account.Text != "") ? true : false);
-            //*pl_Msg.Visible = false;
         }
 
         protected void btn_Submit_Click(object sender, EventArgs e)

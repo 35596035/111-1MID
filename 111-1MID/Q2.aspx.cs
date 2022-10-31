@@ -14,8 +14,35 @@ namespace _111_1MID {
             {"西屯區", "北屯區", "東區"}
         };
 
-        protected void Page_Load(object sender, EventArgs e) {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                for (int i_Ct = 0; i_Ct < s_City.Length; i_Ct++)
+                {
+                    ListItem o_L = new ListItem();
+                    o_L.Text = o_L.Value = s_City[i_Ct];
 
+                    dpl_City.Items.Add(o_L);
+                }
+            }
+            mt_GenSecondList();
+        }
+        protected void dpl_City_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            mt_GenSecondList();
+        }
+
+        protected void mt_GenSecondList()
+        {
+            int i_ind = dpl_City.SelectedIndex;
+            dpl_Area.Items.Clear();
+            for (int i_Ct = 0; i_Ct < s_Area.GetLength(1); i_Ct++)//sa_2D.GetLength(1)是抓取sa_2D[(0),(1)]
+            {
+                ListItem o_L = new ListItem();
+                o_L.Text = o_L.Value = s_Area[i_ind, i_Ct];
+                dpl_Area.Items.Add(o_L);
+            }
         }
     }
 }
